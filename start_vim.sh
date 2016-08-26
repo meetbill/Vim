@@ -19,7 +19,7 @@ function Vim_config ()
 	read -p "Please input your E-mail:" MAIL_AUTHOR     
 	sed -i "s/XXXXXXX@qq.com/$MAIL_AUTHOR/g" $VIMRC     
 	cd ./packages/
-    tar -zxf ctags.tar.gz /usr/bin/
+    tar -zxf ctags.tar.gz -C /usr/bin/
     chmod 755 /usr/bin/ctags
 	CK_VIM=`grep "vi='vim'" ~/.bashrc | wc -l`
 	if [ "w${CK_VIM}" = "w0" ]
