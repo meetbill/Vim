@@ -2,6 +2,8 @@
 一键化安装VIM IDE环境
 本Vim非常适合编写shell、python、markdown程序编写
 
+[VIM基础](doc/vim.md)
+
 ##【目录】
 ----
 
