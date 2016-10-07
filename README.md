@@ -1,11 +1,12 @@
 #### Table of contents
-- [vim IDE 部署方法](#vim-ide-)
-    - [VIM IDE部署方法](#vim-ide)
-    - [IDE一览](#ide)
-- [Vim 原生的功能](#vim-)
-- [Vim IDE 功能](#vim-ide-)
-- [vim版本发布](#vim)
-- [小额捐款](#)
+
+* [vim IDE 部署方法](#vim-ide-部署方法)
+	* [VIM IDE部署方法](#vim-ide部署方法)
+	* [IDE一览](#ide一览)
+* [Vim 原生的功能](#vim-原生的功能)
+* [Vim IDE 功能](#vim-ide-功能)
+* [vim版本发布](#vim版本发布)
+* [小额捐款](#小额捐款)
 
 > * [VIM基础](doc/vim.md)
 > * VIM课外阅读--[笨方法学Vimscript](http://learnvimscriptthehardway.onefloweroneworld.com/)
