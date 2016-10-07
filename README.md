@@ -1,34 +1,30 @@
-#部署方法
-一键化安装VIM IDE环境
-本Vim非常适合编写shell、python、markdown程序编写
+#### Table of contents
+- [vim IDE 部署方法](#vim-ide-)
+    - [VIM IDE部署方法](#vim-ide)
+    - [IDE一览](#ide)
+- [Vim 原生的功能](#vim-)
+- [Vim IDE 功能](#vim-ide-)
+- [vim版本发布](#vim)
+- [小额捐款](#)
 
-[VIM基础](doc/vim.md)
+> * [VIM基础](doc/vim.md)
+> * VIM课外阅读--[笨方法学Vimscript](http://learnvimscriptthehardway.onefloweroneworld.com/)
 
-##【目录】
-----
+## vim IDE 部署方法
 
-[0 vim IDE 部署方法](#0)  
-........[0.1 VIM IDE部署方法 ](#0.1)  
-........[0.2 .vim 一览 ](#0.2)  
-[1 Vim 原生的功能 ](#1)  
-[2 Vim IDE 功能 ](#2)  
-[3 Vim 版本发布 ](#3)  
+### VIM IDE部署方法
 
-##【正文】
-----
-
-<h2 name="0">vim IDE 部署方法</h2>
-<h3 name="0.1">0.1 VIM IDE部署方法</h3>
 部署方法很简单
 
 ```
 git clone https://github.com/BillWang139967/Vim.git
 sh start_vim.sh
 ```
-<h3 name="0.2">0.2 IDE一览 </h3>
+### IDE一览
 
 ![Screenshot](https://github.com/BillWang139967/Vim/raw/master/images/vim.jpg)
-<h2 name="1">1 Vim 原生的功能</h2>
+
+## Vim 原生的功能
 
 > * % 跳转到配对的括号（小括号，方括号，大括号都在次范围），一般用于查看if，while的范围
 > * 多行注释：
@@ -41,7 +37,8 @@ sh start_vim.sh
 >      一般来说,这个功能都会和v命令一起用,以实现整块缩进,当和v一起使用的时候,只需要>和<即可,也就是只输入一次
 > * 搜索关键字:* 定位至当前光光标所指单词的下一次出现的地方,# 定位至当前光光标所指单词的上一次出现的地方,n 定位至跳至已被标记出的单词下一次出现的地方,shift+n 定位至跳至已被标记出的单词上一次出现的地方
 
-<h2 name="2">2 Vim IDE 功能</h2>
+## Vim IDE 功能
+
 ```
     <F2> : TlistToggle               //显示函数列表
             按<F2>将会在VIM的左边打开一个Taglist窗口，这个窗口里面包含了C文件里面的定义，如struct,typedef,全局变量,函数等。
@@ -94,7 +91,7 @@ sh start_vim.sh
 >  画图是Vim普通模式下画图，画图时可以随时切换Vim编辑模式
 > * 普通模式下下,zo 展开,zc 收起,zn 全部展开,zN 全部折叠
 
-<h2 name="3">3 vim版本发布</h2>
+## vim版本发布 
 ----
 * v1.0.5，2016-08-26，修正ctags,添加python 代码自动折叠
 * v1.0.4，2016-05-29，添加自动生成markdown头信息
@@ -108,3 +105,9 @@ sh start_vim.sh
 如果你觉得Vim对你有帮助, 可以对作者进行小额捐款(支付宝)
 
 ![Screenshot](images/5.jpg)
+
+
+
+
+
+
