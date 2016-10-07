@@ -86,14 +86,19 @@ sh start_vim.sh
 ```
 
 > * 输入main后按table键，自动生成main函数
-> * 输入单词自动补全//注，本文档之前输入的单词自动补全
+> * 输入单词自动补全(注，本文档之前输入的单词自动补全)
 > * 按tab键会产生4个空格，很适合python编程哦
-> * 命令行模式输入:DIstart,可以进行画图，通过:DIstop 进行关闭
->  画图是Vim普通模式下画图，画图时可以随时切换Vim编辑模式
+> * 命令行模式输入
+>    * :DIstart,可以进行画图，通过
+>    * :DIstop 进行关闭,画图是Vim普通模式下画图，画图时可以随时切换Vim编辑模式
+> * 命令行模式输入
+>    * :GenTocGFM ,生成 GFM 链接风格的 Table of Contents.适用于 GitHub 仓库里的 Markdown 文件。
+>    * :GenTocRedcarpet , 生成 Redcarpet 链接风格的 Table of Contents.适用于使用 Redcarpet 作为 Markdown 引擎的 Jekyll 项目或其它地方。
 > * 普通模式下下,zo 展开,zc 收起,zn 全部展开,zN 全部折叠
 
 ## vim版本发布 
 ----
+* v1.0.6，2016-10-07，增加为 Markdown 生成 TOC 的 Vim 插件
 * v1.0.5，2016-08-26，修正ctags,添加python 代码自动折叠
 * v1.0.4，2016-05-29，添加自动生成markdown头信息
 * v1.0.3，2016-05-18，对github文档进行整理
