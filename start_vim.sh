@@ -24,6 +24,7 @@ function Vim_config ()
 	CK_VIM=`grep "vi='vim'" ~/.bashrc | wc -l`
 	if [ "w${CK_VIM}" = "w0" ]
 	then
+		echo " " >> ~/.bashrc
 		echo "alias vi='vim'" >> ~/.bashrc
 	fi 
 	. ~/.bashrc
