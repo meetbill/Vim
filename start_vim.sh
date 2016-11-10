@@ -44,6 +44,9 @@ echo -e "    \033[33m     \033[0m"
 echo -e "    \033[44;37m=========================================================================\033[0m" 
 echo " "
 echo " "
+
+VIM_PATH=$(cd `dirname $0`; pwd)
+cd ${VIM_PATH}
 PS3="Please input a number":              
   select i in  "Vim_config" "quit"
 do 

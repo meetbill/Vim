@@ -6,6 +6,7 @@
 * Vim 功能 
     * [Vim 原生的功能](doc/vim.md)
     * [Vim IDE 功能](doc/ide.md)
+    * [Vim 其他技巧](doc/skill.md)
 * [vim版本发布](#vim版本发布)
 * [小额捐款](#小额捐款)
 
@@ -19,6 +20,7 @@
 
 ```
 git clone https://github.com/BillWang139967/Vim.git
+cd Vim
 sh start_vim.sh
 ```
 ### IDE一览
