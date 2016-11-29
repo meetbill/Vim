@@ -13,23 +13,45 @@ VIM_FILE=./packages/vim*
 function Vim_config ()      
 {   
 	clear
-	tar -zxf ${VIM_FILE} -C ~/
-	read -p "Please input your name:" AUTHOR      
-	sed -i "s/Bill/$AUTHOR/g" $VIMRC     
-	read -p "Please input your E-mail:" MAIL_AUTHOR     
-	sed -i "s/XXXXXXX@qq.com/$MAIL_AUTHOR/g" $VIMRC     
-	cd ./packages/
-    tar -zxf ctags.tar.gz -C /usr/bin/
-    chmod 755 /usr/bin/ctags
-	CK_VIM=`grep "vi='vim'" ~/.bashrc | wc -l`
-	if [ "w${CK_VIM}" = "w0" ]
-	then
-		echo " " >> ~/.bashrc
-		echo "alias vi='vim'" >> ~/.bashrc
-	fi 
-	. ~/.bashrc
-	echo "this vim config is success !" 
-	exit 0
+    if [ `id -u` -eq 0 ];
+    then
+	    tar -zxf ${VIM_FILE} -C ~/
+	    read -p "Please input your name:" AUTHOR      
+	    sed -i "s/Bill/$AUTHOR/g" $VIMRC     
+	    read -p "Please input your E-mail:" MAIL_AUTHOR     
+	    sed -i "s/XXXXXXX@qq.com/$MAIL_AUTHOR/g" $VIMRC     
+	    cd ./packages/
+        tar -zxf ctags.tar.gz -C /usr/bin/
+        chmod 755 /usr/bin/ctags
+	    CK_VIM=`grep "vi='vim'" ~/.bashrc | wc -l`
+	    if [ "w${CK_VIM}" = "w0" ]
+	    then
+		    echo " " >> ~/.bashrc
+		    echo "alias vi='vim'" >> ~/.bashrc
+	    fi 
+	    . ~/.bashrc
+	    echo "this vim config is success !" 
+	    exit 0
+    else
+        chmod 777 -R *
+	    sudo tar -zxf ${VIM_FILE} -C ~/
+	    read -p "Please input your name:" AUTHOR      
+	    sed -i "s/Bill/$AUTHOR/g" $VIMRC     
+	    read -p "Please input your E-mail:" MAIL_AUTHOR     
+	    sed -i "s/XXXXXXX@qq.com/$MAIL_AUTHOR/g" $VIMRC     
+	    cd ./packages/
+        sudo tar -zxf ctags.tar.gz -C /usr/bin/
+        sudo chmod 755 /usr/bin/ctags
+	    CK_VIM=`grep "vi='vim'" ~/.bashrc | wc -l`
+	    if [ "w${CK_VIM}" = "w0" ]
+	    then
+		    echo " " >> ~/.bashrc
+		    echo "alias vi='vim'" >> ~/.bashrc
+	    fi 
+	    . ~/.bashrc
+	    echo "this vim config is success !" 
+	    exit 0
+    fi
 }      
           
           
@@ -47,6 +69,8 @@ echo " "
 
 VIM_PATH=$(cd `dirname $0`; pwd)
 cd ${VIM_PATH}
+
+
 PS3="Please input a number":              
   select i in  "Vim_config" "quit"
 do 

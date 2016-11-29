@@ -76,6 +76,8 @@
     * :GenTocGFM ,生成 GFM 链接风格的 Table of Contents.适用于 GitHub 仓库里的 Markdown 文件。
     * :GenTocRedcarpet , 生成 Redcarpet 链接风格的 Table of Contents.适用于使用 Redcarpet 作为 Markdown 引擎的 Jekyll 项目或其它地方。
 
+* 命令行下输入命令时按 tab 键会将所有匹配值输出
+
 ## 一般模式下功能
 
 * 普通模式下(折叠):

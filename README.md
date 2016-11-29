@@ -2,6 +2,7 @@
 
 * [vim IDE 部署](#vim-ide-部署)
 	* [VIM IDE部署方法](#vim-ide部署方法)
+	* [卸载](#卸载)
 	* [IDE一览](#ide一览)
 * Vim 功能 
     * [Vim 原生的功能](doc/vim.md)
@@ -16,13 +17,21 @@
 
 ### VIM IDE部署方法
 
-部署方法很简单
+> * 本 Vim 可以重复安装
+> * 普通用户执行程序时需要有sudo权限
 
 ```
-git clone https://github.com/BillWang139967/Vim.git
-cd Vim
-sh start_vim.sh
+#git clone https://github.com/BillWang139967/Vim.git
+#chmod 777 -R Vim
+#cd Vim
+#./start_vim.sh
 ```
+### 卸载
+```
+#cd ~
+#rm -rf .vim*
+```
+
 ### IDE一览
 
 ![Screenshot](https://github.com/BillWang139967/Vim/raw/master/images/vim.jpg)
