@@ -39,6 +39,22 @@
 #cd Vim
 #./start_vim.sh
 ```
+**部署中问题**
+
+使用git clone失败
+
+```
+[root@localhost ~]# git clone https://github.com/BillWang139967/Vim.git
+Initialized empty Git repository in /root/Vim/.git/
+error:  while accessing https://github.com/BillWang139967/Vim.git/info/refs
+
+fatal: HTTP request failed
+```
+解决方法
+```
+#git config --global http.sslVerify false
+```
+
 ### 卸载
 ```
 #cd ~
