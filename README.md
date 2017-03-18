@@ -12,13 +12,16 @@
 
 -----------------------------------------------------
 ```
+
+<!-- vim-markdown-toc GFM -->
 * [vim IDE 部署](#vim-ide-部署)
-	* [VIM IDE 部署方法](#vim-ide-部署方法)
-	* [卸载](#卸载)
-	* [IDE 一览](#ide-一览)
-* [vim 版本发布](#vim-版本发布)
+    * [VIM IDE 部署方法](#vim-ide-部署方法)
+    * [卸载](#卸载)
+    * [IDE 一览](#ide-一览)
+* [## vim 版本发布](#-vim-版本发布)
 * [小额捐款](#小额捐款)
 
+<!-- vim-markdown-toc -->
 > * VIM 课外阅读 --[笨方法学 Vimscript](http://learnvimscriptthehardway.onefloweroneworld.com/)
 > * [VIM wiki](https://github.com/BillWang139967/Vim/wiki)
 
@@ -63,13 +66,13 @@ fatal: HTTP request failed
 
 ## vim 版本发布
 ----
-* v1.0.8，2017-03-18，增加为自动格式化中文排版插件 [pangu](https://github.com/hotoo/pangu.vim)。
+* v1.0.8，2017-03-18，增加自动格式化中文排版插件 [pangu](https://github.com/hotoo/pangu.vim), 更新 [TOC](https://github.com/mzlogin/vim-markdown-toc) 插件。
 * v1.0.7，2016-10-07，增加为 Markdown 生成 TOC 的 Vim 插件
 * v1.0.5，2016-08-26，修正 ctags, 添加 python 代码自动折叠
 * v1.0.4，2016-05-29，添加自动生成 markdown 头信息
 * v1.0.3，2016-05-18，对 github 文档进行整理
 * v1.0.2，2014-08-13，新增：对 Vim 进行整理发布一键化程序
-* v1.0.1，2014-01-01，新增。发布初始版本。
+* v1.0.1，2014-01-01，新增：发布初始版本。
 
 
 ## 小额捐款
