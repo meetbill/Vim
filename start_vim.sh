@@ -1,8 +1,8 @@
 #!/bin/bash      
 #########################################################################
 # File Name: config.sh
-# Author: wangbin
-# mail: 772384788@qq.com
+# Author: meetbill
+# mail: meetbill@163.com
 # Created Time: Thu 06 Nov 2014 06:31:50 PM CST
 #########################################################################
 #Define Path    
