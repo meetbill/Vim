@@ -70,6 +70,7 @@ fatal: HTTP request failed
 
 ## 版本发布
 
+* v1.0.9，2017-04-18，增加括号自动匹配插件 [auto-pairs](https://github.com/jiangmiao/auto-pairs)
 * v1.0.8，2017-03-18，增加自动格式化中文排版插件 [pangu](https://github.com/hotoo/pangu.vim), 更新 [TOC](https://github.com/mzlogin/vim-markdown-toc) 插件。
 * v1.0.7，2016-10-07，增加为 Markdown 生成 TOC 的 Vim 插件
 * v1.0.5，2016-08-26，修正 ctags, 添加 python 代码自动折叠
