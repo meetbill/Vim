@@ -70,6 +70,7 @@ fatal: HTTP request failed
 
 ## 版本发布
 
+* v1.0.11，2017-07-24，修改状态栏显示
 * v1.0.10，2017-04-21，增加 python 代码自动审查(pyflakes)
 * v1.0.9，2017-04-18，增加括号自动匹配插件 [auto-pairs](https://github.com/jiangmiao/auto-pairs)
 * v1.0.8，2017-03-18，增加自动格式化中文排版插件 [pangu](https://github.com/hotoo/pangu.vim), 更新 [TOC](https://github.com/mzlogin/vim-markdown-toc) 插件。
