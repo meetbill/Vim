@@ -77,16 +77,16 @@ fatal: HTTP request failed
 
 ## 版本发布
 
-* v1.0.11  2017-07-24  修改：状态栏显示
-* v1.0.10  2017-04-21  增加：python 代码自动审查(pyflakes)
-* v1.0.09  2017-04-18  增加：括号自动匹配插件 [auto-pairs](https://github.com/jiangmiao/auto-pairs)
-* v1.0.08  2017-03-18  增加：自动格式化中文排版插件 [pangu](https://github.com/hotoo/pangu.vim), 更新 [TOC](https://github.com/mzlogin/vim-markdown-toc) 插件。
-* v1.0.07  2016-10-07  增加：Markdown 生成 [TOC](https://github.com/mzlogin/vim-markdown-toc) 插件
-* v1.0.05  2016-08-26  修改: 更新 ctags, 添加 python 代码自动折叠
-* v1.0.04  2016-05-29  增加：自动生成 markdown 头信息
-* v1.0.03  2016-05-18  修订：对 github 文档进行整理
-* v1.0.02  2014-08-13  新增：对 Vim 进行整理发布一键化程序
-* v1.0.01  2014-01-01  新增：发布初始版本。
+* [v1.0.11]  2017-07-24  修改：状态栏显示
+* [v1.0.10]  2017-04-21  增加：python 代码自动审查(pyflakes)
+* [v1.0.09]  2017-04-18  增加：括号自动匹配插件 [auto-pairs](https://github.com/jiangmiao/auto-pairs)
+* [v1.0.08]  2017-03-18  增加：自动格式化中文排版插件 [pangu](https://github.com/hotoo/pangu.vim), 更新 [TOC](https://github.com/mzlogin/vim-markdown-toc) 插件。
+* [v1.0.07]  2016-10-07  增加：Markdown 生成 [TOC](https://github.com/mzlogin/vim-markdown-toc) 插件
+* [v1.0.05]  2016-08-26  修改：更新 ctags, 添加 python 代码自动折叠
+* [v1.0.04]  2016-05-29  增加：自动生成 markdown 头信息
+* [v1.0.03]  2016-05-18  修订：对 github 文档进行整理
+* [v1.0.02]  2014-08-13  新增：对 Vim 进行整理发布一键化程序
+* [v1.0.01]  2014-01-01  新增：发布初始版本。
 
 ## 小额捐款
 
