@@ -42,13 +42,16 @@ function Vim_config ()
 	    cd ./packages/
         sudo tar -zxf ctags.tar.gz -C /usr/bin/
         sudo chmod 755 /usr/bin/ctags
-	    CK_VIM=`grep "vi='vim'" ~/.bashrc | wc -l`
-	    if [ "w${CK_VIM}" = "w0" ]
-	    then
-		    echo " " >> ~/.bashrc
-		    echo "alias vi='vim'" >> ~/.bashrc
-	    fi 
-	    . ~/.bashrc
+        if [[ -e ~/.bashrc  ]]
+        then
+            CK_VIM=`grep "vi='vim'" ~/.bashrc | wc -l`
+            if [ "w${CK_VIM}" = "w0" ]
+            then
+                echo " " >> ~/.bashrc
+                echo "alias vi='vim'" >> ~/.bashrc
+            fi 
+            . ~/.bashrc
+        fi
 	    echo "this vim config is success !" 
 	    exit 0
     fi
