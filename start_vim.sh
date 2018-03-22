@@ -4,7 +4,7 @@
 # Author: meetbill
 # mail: meetbill@163.com
 # Created Time: Thu 06 Nov 2014 06:31:50 PM CST
-# Updated Time: 2018/03/04 16:24
+# Updated Time: 2018/03/22 16:24
 #########################################################################
 #Define Path    
 VIMRC=~/.vimrc 
@@ -17,14 +17,26 @@ function scripts_generic_identifyOs(){
     os=$(uname -a)
     if [[ ${os} == *"Darwin"* ]]; then
       os="Mac"
+      return 0
     elif [[ ${os} == *"Ubuntu"* ]]; then
       os="Ubuntu"
-    elif [[ "$(cat /etc/system-release-cpe)" == *"centos"* ]]; then
-      os="Centos"
-    elif [[ "$(cat /etc/system-release-cpe)" == *"redhat"* ]]; then
-      os="Redhat"
+      return 0
+    fi
+
+    if [[ -e "/etc/system-release-cpe" ]]
+    then
+        if [[ "$(cat /etc/system-release-cpe)" == *"centos"* ]]; then
+            os="Centos"
+        elif [[ "$(cat /etc/system-release-cpe)" == *"redhat"* ]]; then
+            os="Redhat"
+        fi
+        return 0
     else
-      os="Unrecognised"
+        os="Unrecognised"
+        echo "os:${os}"
+        echo "this vim config_server is success !" 
+        cp ./packages/server_vimrc ~/.vimrc
+        exit 0
     fi
 }
 #deine Vim_config     
