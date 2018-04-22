@@ -70,9 +70,8 @@ fatal: HTTP request failed
 
 > * [Vim 原生的功能](doc/vim.md)
 > * [Vim IDE 功能](doc/ide.md)
-> * [Vim 常用技巧](https://github.com/meetbill/Vim/wiki/vim_skill)
-> * [VIM wiki](https://github.com/meetbill/Vim/wiki)
-> * VIM 课外阅读 --[笨方法学 Vimscript](http://learnvimscriptthehardway.onefloweroneworld.com/)
+> * [Vim wiki](https://github.com/meetbill/Vim/wiki)
+> * Vim 课外阅读 --[笨方法学 Vimscript](http://learnvimscriptthehardway.onefloweroneworld.com/)
 
 ![Screenshot](https://github.com/meetbill/Vim/raw/master/images/vim.jpg)
 
