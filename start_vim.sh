@@ -13,19 +13,27 @@ VIM_FILE=./packages/vim*
 function scripts_generic_identifyOs(){
 
     ## determine OS of computer
-
     os=$(uname -a)
     if [[ ${os} == *"Darwin"* ]]; then
       os="Mac"
+      return 0
     elif [[ ${os} == *"Ubuntu"* ]]; then
       os="Ubuntu"
-    elif [[ "$(cat /etc/system-release-cpe)" == *"centos"* ]]; then
-      os="Centos"
-    elif [[ "$(cat /etc/system-release-cpe)" == *"redhat"* ]]; then
-      os="Redhat"
-    else
-      os="Unrecognised"
+      return 0
     fi
+
+    if [[ -e "/etc/system-release-cpe" ]]
+    then
+        if [[ "$(cat /etc/system-release-cpe)" == *"centos"* ]]; then
+            os="Centos"
+        elif [[ "$(cat /etc/system-release-cpe)" == *"redhat"* ]]; then
+            os="Redhat"
+        fi
+    else
+        os="Unrecognised"
+        echo "os:${os}"
+    fi
+    return 0
 }
 #deine Vim_config
 function Vim_config ()
