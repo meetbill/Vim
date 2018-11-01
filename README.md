@@ -15,65 +15,20 @@
 
 <!-- vim-markdown-toc GFM -->
 
-* [1 Vim IDE 部署](#1-vim-ide-部署)
-    * [1.1 Git 进行下载安装](#11-git-进行下载安装)
-    * [1.2 Curl 进行下载安装](#12-curl-进行下载安装)
-    * [1.3 卸载](#13-卸载)
+* [1 Vim IDE 概览](#1-vim-ide-概览)
 * [2 牛刀小试](#2-牛刀小试)
 * [3 版本发布](#3-版本发布)
 * [4 小额捐款](#4-小额捐款)
 
 <!-- vim-markdown-toc -->
 
-## 1 Vim IDE 部署
+## 1 Vim IDE 概览
 
-> * 本 Vim 可以重复安装
-> * 普通用户执行程序时需要有 sudo 权限
-
-### 1.1 Git 进行下载安装
-```
-#git clone https://github.com/meetbill/Vim.git
-#chmod 777 -R Vim
-#cd Vim
-#./start_vim.sh
-```
-**常见问题**
-
-使用 Git clone 失败
-
-```
-[root@localhost ~]# git clone https://github.com/meetbill/Vim.git
-Initialized empty Git repository in /root/Vim/.git/
-error:  while accessing https://github.com/meetbill/Vim.git/info/refs
-
-fatal: HTTP request failed
-```
-解决方法
-```
-#git config --global http.sslVerify false
-```
-### 1.2 Curl 进行下载安装
-
-```
-#curl -o vim.zip https://codeload.github.com/meetbill/Vim/zip/master
-#unzip vim.zip
-#cd Vim-master
-#bash start_vim.sh
-```
-### 1.3 卸载
-```
-#cd ~
-#rm -rf .vim*
-```
+![Screenshot](https://github.com/meetbill/Vim/raw/master/images/vim.jpg)
 
 ## 2 牛刀小试
 
-> * [Vim 原生的功能](doc/vim.md)
-> * [Vim IDE 功能](doc/ide.md)
-> * [Vim wiki](https://github.com/meetbill/Vim/wiki)
-> * Vim 课外阅读 --[笨方法学 Vimscript](http://learnvimscriptthehardway.onefloweroneworld.com/)
-
-![Screenshot](https://github.com/meetbill/Vim/raw/master/images/vim.jpg)
+> * [Vim IDE 使用手册](https://github.com/meetbill/Vim/wiki)
 
 ## 3 版本发布
 
