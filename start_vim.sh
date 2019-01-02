@@ -112,11 +112,11 @@ function Vim_config ()
     cp ./packages/vimrc ~/.vimrc
     if [[ "w$os" == "wMac" ]]
     then
-        sed -i "" "s/meetbill/$AUTHOR/g" $VIMRC
         sed -i "" "s/meetbill@163.com/$MAIL_AUTHOR/g" $VIMRC
+        sed -i "" "s/meetbill/$AUTHOR/g" $VIMRC
     else
-        sed -i "s/meetbill/$AUTHOR/g" $VIMRC
         sed -i "s/meetbill@163.com/$MAIL_AUTHOR/g" $VIMRC
+        sed -i "s/meetbill/$AUTHOR/g" $VIMRC
     fi
     vim_orther
     echo "this vim config is success !"

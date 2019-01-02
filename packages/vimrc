@@ -4,7 +4,7 @@
 "
 " Maintainer: meetbill <meetbill@163.com>
 "    Created: 2014-01-01
-" LastChange: 2018-04-22
+" LastChange: 2019-01-02
 " pathogen
 execute pathogen#infect()
 " GENERAL SETTINGS{{{
@@ -124,9 +124,9 @@ if has("cscope")
 endif
 " VimGDB.vim
 if has("gdb")
-	set asm=0
-	let g:vimgdb_debug_file=""
-	run macros/gdb_mappings.vim
+    set asm=0
+    let g:vimgdb_debug_file=""
+    run macros/gdb_mappings.vim
 endif
 " LookupFile setting
 let g:LookupFile_TagExpr='"./tags.filename"'
@@ -137,9 +137,9 @@ let g:LookupFile_AlwaysAcceptFirst=1
 let g:LookupFile_AllowNewFiles=0
 " plugin shortcuts
 function! RunShell(Msg, Shell)
-	echo a:Msg . '...'
-	call system(a:Shell)
-	echon 'done'
+    echo a:Msg . '...'
+    call system(a:Shell)
+    echon 'done'
 endfunction
 nmap  <F2> :TlistToggle<cr>
 nmap  <F3> :NERDTreeToggle<cr>
@@ -168,67 +168,72 @@ autocmd BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn} set filetype=mark
 autocmd BufNewFile *.py,*.cpp,*.[ch],*.sh,*.java,*.{md,mdown,mkd,mkdn,markdown,mdwn} exec ":call SetTitle()" 
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 "define a funtion[SetTitle]automatic a title
-func SetTitle() 
-	".sh file 
-	if &filetype == 'sh' 
-		call setline(1,"\#!/bin/bash") 
-		call append(line("."), "\#########################################################################") 
-		call append(line(".")+1, "\# File Name: ".expand("%")) 
-		call append(line(".")+2, "\# Author: meetbill") 
-		call append(line(".")+3, "\# mail: meetbill@163.com") 
-		call append(line(".")+4, "\# Created Time: ".strftime("20%y-%m-%d %H:%M:%S")) 
-		call append(line(".")+5, "\#########################################################################") 
-		call append(line(".")+6, "") 
-	endif
-	if &filetype == 'cpp'
-		call setline(1, "/*************************************************************************") 
-		call append(line("."), "	> File Name: ".expand("%")) 
-		call append(line(".")+1, "	> Author: meetbill") 
-		call append(line(".")+2, "	> Mail: meetbill@163.com ") 
-		call append(line(".")+3, "	> Created Time: ".strftime("20%y-%m-%d %H:%M:%S")) 
-		call append(line(".")+4, " ************************************************************************/") 
-		call append(line(".")+5, "")
-		call append(line(".")+6, "#include<iostream>")
-		call append(line(".")+7, "using namespace std;")
-		call append(line(".")+8, "")
-	endif
-	if &filetype == 'c'
-		call setline(1, "/*************************************************************************") 
-		call append(line("."), "	> File Name: ".expand("%")) 
-		call append(line(".")+1, "	> Author: meetbill") 
-		call append(line(".")+2, "	> Mail: meetbill@163.com ") 
-		call append(line(".")+3, "	> Created Time: ".strftime("20%y-%m-%d %H:%M:%S")) 
-		call append(line(".")+4, " ************************************************************************/") 
-		call append(line(".")+5, "")
-		call append(line(".")+6, "#include<stdio.h>")
-		call append(line(".")+7, "")
-	endif
-	if &filetype == 'python'
-	    call setline(1, "\#!/usr/bin/python")  
-		call setline(2, "\#coding=utf8")  
-	    call setline(3, "\"\"\"")  
-		call setline(4, "\# Author: meetbill")  
-		call setline(5, "\# Created Time : ".strftime("20%y-%m-%d %H:%M:%S"))  
-		call setline(6, "")  
-		call setline(7, "\# File Name: ".expand("%"))  
-		call setline(8, "\# Description:")  
-	    call setline(9, "")  
-	    call setline(10, "\"\"\"")  
-	endif
-	if &filetype == 'markdown'
-	    call setline(1, "\---")  
-        call setline(2, "layout: post")
-        call setline(3, "title:")  
-        call setline(4, "subtitle:")  
-        call setline(5, "date: ".strftime("20%y-%m-%d %H:%M:%S"))  
-        call setline(6, "category:") 
-        call setline(7, "author: meetbill") 
-        call setline(8, "tags:") 
-        call setline(9, "   -") 
-        call setline(10, "\---") 
-	endif
-	"create a file，automatic position the end of file
-	autocmd BufNewFile * normal G
+func SetTitle()
+    ".sh file
+    if &filetype == 'sh'
+        let line_num = 0
+        let line_num = line_num + 1 | call setline(line_num,"\#!/bin/bash")
+        let line_num = line_num + 1 | call setline(line_num, "\#########################################################################")
+        let line_num = line_num + 1 | call setline(line_num, "\# File Name: ".expand("%"))
+        let line_num = line_num + 1 | call setline(line_num, "\# Author: meetbill")
+        let line_num = line_num + 1 | call setline(line_num, "\# mail: meetbill@163.com")
+        let line_num = line_num + 1 | call setline(line_num, "\# Created Time: ".strftime("20%y-%m-%d %H:%M:%S"))
+        let line_num = line_num + 1 | call setline(line_num, "\#########################################################################")
+        let line_num = line_num + 1 | call setline(line_num, "")
+    endif
+    if &filetype == 'cpp'
+        let line_num = 0
+        let line_num = line_num + 1 | call setline(line_num, "/*************************************************************************")
+        let line_num = line_num + 1 | call setline(line_num, "  > File Name: ".expand("%"))
+        let line_num = line_num + 1 | call setline(line_num, "  > Author: meetbill")
+        let line_num = line_num + 1 | call setline(line_num, "  > Mail: meetbill@163.com ")
+        let line_num = line_num + 1 | call setline(line_num, "  > Created Time: ".strftime("20%y-%m-%d %H:%M:%S"))
+        let line_num = line_num + 1 | call setline(line_num, " ************************************************************************/")
+        let line_num = line_num + 1 | call setline(line_num, "")
+        let line_num = line_num + 1 | call setline(line_num, "#include<iostream>")
+        let line_num = line_num + 1 | call setline(line_num, "using namespace std;")
+        let line_num = line_num + 1 | call setline(line_num, "")
+    endif
+    if &filetype == 'c'
+        let line_num = 0
+        let line_num = line_num + 1 | call setline(line_num, "/*************************************************************************")
+        let line_num = line_num + 1 | call setline(line_num, "  > File Name: ".expand("%"))
+        let line_num = line_num + 1 | call setline(line_num, "  > Author: meetbill")
+        let line_num = line_num + 1 | call setline(line_num, "  > Mail: meetbill@163.com ")
+        let line_num = line_num + 1 | call setline(line_num, "  > Created Time: ".strftime("20%y-%m-%d %H:%M:%S"))
+        let line_num = line_num + 1 | call setline(line_num, " ************************************************************************/")
+        let line_num = line_num + 1 | call setline(line_num, "")
+        let line_num = line_num + 1 | call setline(line_num, "#include<stdio.h>")
+        let line_num = line_num + 1 | call setline(line_num, "")
+    endif
+    if &filetype == 'python'
+        let line_num = 0
+        let line_num = line_num + 1 | call setline(line_num, "#!/usr/bin/python")
+        let line_num = line_num + 1 | call setline(line_num, "# coding=utf8")
+        let line_num = line_num + 1 | call setline(line_num, "\"\"\"")
+        let line_num = line_num + 1 | call setline(line_num, "# Author: meetbill")
+        let line_num = line_num + 1 | call setline(line_num, "# Created Time : ".strftime("20%y-%m-%d %H:%M:%S"))
+        let line_num = line_num + 1 | call setline(line_num, "")
+        let line_num = line_num + 1 | call setline(line_num, "# File Name: ".expand("%"))
+        let line_num = line_num + 1 | call setline(line_num, "# Description:")
+        let line_num = line_num + 1 | call setline(line_num, "")
+        let line_num = line_num + 1 | call setline(line_num, "\"\"\"")
+    endif
+    if &filetype == 'markdown'
+        let line_num = 0
+        let line_num = line_num + 1 | call setline(line_num, "\---")
+        let line_num = line_num + 1 | call setline(line_num, "layout: post")
+        let line_num = line_num + 1 | call setline(line_num, "title:")
+        let line_num = line_num + 1 | call setline(line_num, "subtitle:")
+        let line_num = line_num + 1 | call setline(line_num, "date: ".strftime("20%y-%m-%d %H:%M:%S"))
+        let line_num = line_num + 1 | call setline(line_num, "category:")
+        let line_num = line_num + 1 | call setline(line_num, "author: meetbill")
+        let line_num = line_num + 1 | call setline(line_num, "tags:")
+        let line_num = line_num + 1 | call setline(line_num, "   -")
+        let line_num = line_num + 1 | call setline(line_num, "\---")
+    endif
+    "create a file，automatic position the end of file
+    autocmd BufNewFile * normal G
 endfunc 
 
 
@@ -248,26 +253,26 @@ vmap <C-c> "+y
 "C，C++ //compile
 map <F7> :call CompileRunGcc()<CR>
 func! CompileRunGcc()
-	exec "w"
-	if &filetype == 'c'
-		exec "!gcc % -o %<"
-		exec "! ./%<"
-	elseif &filetype == 'cpp'
-		exec "!g++ % -o %<"
-		exec "! ./%<"
-	elseif &filetype == 'sh'
-		:!./%
-	elseif &filetype == 'py'
-		exec "!python %"
-		exec "!python %<"
-	endif
+    exec "w"
+    if &filetype == 'c'
+        exec "!gcc % -o %<"
+        exec "! ./%<"
+    elseif &filetype == 'cpp'
+        exec "!g++ % -o %<"
+        exec "! ./%<"
+    elseif &filetype == 'sh'
+        :!./%
+    elseif &filetype == 'py'
+        exec "!python %"
+        exec "!python %<"
+    endif
 endfunc
 "C,C++ //debug
 map <F8> :call Rungdb()<CR>
 func! Rungdb()
-	exec "w"
-	exec "!gcc % -g -o %<"
-	exec "!gdb ./%<"
+    exec "w"
+    exec "!gcc % -g -o %<"
+    exec "!gdb ./%<"
 endfunc
 
 
@@ -280,17 +285,17 @@ nmap wm :WMToggle<cr>
 "}}}
 " CTags{{{
 "2014-7-13
-let Tlist_Sort_Type = "name"    
-let Tlist_Compart_Format = 1    
-let Tlist_Exist_OnlyWindow = 1  
-let Tlist_File_Fold_Auto_Close = 0  
-""autocmd FileType h,cpp,cc,c set tags+=D:\tools\cpp\tags  
+let Tlist_Sort_Type = "name"
+let Tlist_Compart_Format = 1
+let Tlist_Exist_OnlyWindow = 1
+let Tlist_File_Fold_Auto_Close = 0
+""autocmd FileType h,cpp,cc,c set tags+=D:\tools\cpp\tags
 let Tlist_Show_One_File=1
 set tags=tags
 set autochdir
-let Tlist_Ctags_Cmd = '/usr/bin/ctags' 
+let Tlist_Ctags_Cmd = '/usr/bin/ctags'
 let Tlist_Show_One_File = 1
-let Tlist_Exit_OnlyWindow = 1 
+let Tlist_Exit_OnlyWindow = 1
 let g:Tlist_Auto_Update=1
 ""let Tlist_Process_File_Always=1
 let Tlist_WinWidth=25
